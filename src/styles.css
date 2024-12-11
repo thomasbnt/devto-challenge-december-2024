@@ -1,0 +1,152 @@
+:root {
+	--primary-color: #2972bd;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f2f2f2;
+	color: #333;
+	scroll-behavior: smooth;
+}
+
+body, * {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100dvh;
+}
+
+@media (max-width: 900px) {
+	section p {
+		margin: 0 1rem;
+		text-align: center;
+	}
+}
+
+section:first-of-type {
+	height: 60dvh;
+	padding-top: 10dvh;
+}
+
+section:nth-child(odd) {
+	background-color: #fff;
+}
+
+section:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	padding: 1rem;
+	background-color: var(--primary-color);
+	color: white;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+@media (max-width: 900px) {
+	h1 {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	h3 {
+		text-align: center;
+		margin: 1rem 0;
+	}
+}
+
+header p {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+nav#main-nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	list-style: none;
+	text-wrap: nowrap;
+}
+
+@media (max-width: 00px) {
+	nav#main-nav, ul {
+		overflow-x: scroll;
+		scroll-snap-type: y mandatory;
+	}
+}
+
+#traditions ul {
+	display: flex;
+	flex-direction: column;
+}
+
+#traditions li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	max-width: 40ch;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+p {
+	max-width: 80ch;
+	line-height: 1.5;
+	text-wrap: balance;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
